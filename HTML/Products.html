@@ -3,11 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Produit de Lavage</title>
     <link rel="stylesheet" href="../CSS/index.css">
     <link rel="stylesheet" href="../CSS/Products.css">
+    <link rel="shortcut icon" href="../Images/icones/projectIcone.png" type="image/x-icon">
 </head>
 <body>
-    Welcome to products page!
+<!-- Navbar -->
+<nav>
+    <input type="checkbox" id="nav-check">
+    <label for="nav-check" id="nav-checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label id="nav-logo">
+        <img src="../Images/acceuil.png" alt="Erreur">
+    </label>
+    <ul id="nav-links">
+        <li><a id="nav-home" href="#" class="active">Home</a></li>
+        <li><a id="nav-services" href="#">Products</a></li>
+        <li><a id="nav-services" href="#">Services</a></li>
+        <li><a id="nav-feedback" href="#">Blogs</a></li>
+        <li><a id="nav-about" href="#">About</a></li>
+        <li><a id="nav-contact" href="#contact">Contact</a></li>   
+    </ul>
+</nav>
+
+
+    <!-- contact-us  -->
+  <div id="contact" class="contact-section">
+    <div class="container">
+      <div class="title text-center">
+        <h1>Contact Us</h1>
+        <p>Let us know what you need and we will get back to you in no time.</p>
+      </div>
+      <div class="form">
+        <div class="form-group">
+          <label for="firstname">First name</label>
+          <input type="text" name="firstname" id="firstname" placeholder="John">
+        </div>
+        <div class="form-group">
+          <label for="lastname">Last name</label>
+          <input type="text" name="lastname" id="lastname" placeholder="Doe">
+        </div>
+        <div class="form-group full-width">
+          <label for="email">Email Address</label>
+          <input type="email" name="email" id="email" placeholder="john.doe@example.com">
+        </div>
+        <div class="form-group full-width">
+          <label for="subject">Subject</label>
+          <input type="text" name="subject" id="subject" placeholder="Subject Name">
+        </div>
+        <div class="form-group full-width">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" placeholder="Your message..." rows="5"></textarea>
+        </div>
+        <div class="submit">
+          <button id="sendButton">Send Message</button>
+          <div id="loading" class="loading"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
