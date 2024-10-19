@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,62 +7,158 @@
     <link rel="stylesheet" href="../CSS/index.css">
     <link rel="stylesheet" href="../CSS/Products.css">
     <link rel="shortcut icon" href="../Images/icones/projectIcone.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-<!-- Navbar -->
-<nav>
-    <input type="checkbox" id="nav-check">
-    <label for="nav-check" id="nav-checkbtn">
-        <i class="fas fa-bars"></i>
-    </label>
-    <label id="nav-logo">
-        <img src="../Images/acceuil.png" alt="Erreur">
-    </label>
-    <ul id="nav-links">
-        <li><a id="nav-home" href="#" class="active">Home</a></li>
-        <li><a id="nav-services" href="#">Products</a></li>
-        <li><a id="nav-services" href="#">Services</a></li>
-        <li><a id="nav-feedback" href="#">Blogs</a></li>
-        <li><a id="nav-about" href="#">About</a></li>
-        <li><a id="nav-contact" href="#contact">Contact</a></li>   
-    </ul>
+ <!-- Navbar -->
+ <nav>
+  <input type="checkbox" id="nav-check">
+  <label for="nav-check" id="nav-checkbtn">
+      <i class="fas fa-bars"></i>
+  </label>
+  <label id="nav-logo">
+      <img src="../Images/acceuil.png" alt="Erreur">
+  </label>
+  <ul id="nav-links">
+      <li><a id="nav-home" href="../HTML/index.html" >Home</a></li>
+      <li><a id="nav-services" href="../HTML/Products.html">products</a></li>
+      <li><a id="nav-services" href="../HTML/Services.html">Services</a></li>
+      <li><a id="nav-feedback" href="../HTML/Blogs.html">Blogs</a></li>
+      <li><a id="nav-contact" href="#contact">Contact</a></li>   
+  </ul>
 </nav>
+<!-- Titre -->
+<header>
+  <h1>Produits Offerts par Lavage</h1>
+</header>
+<!-- Produits -->
+<div class="product-grid">
+  <!-- Card 1 -->
+  <div class="product-card">
+    <img src="../Images/produits/car-shampoo.webp" alt="Shampoing Voiture">
+    <h3>Shampoing Voiture - Meguiar's</h3>
+    <p>Shampoing moussant qui élimine la saleté et laisse une brillance éclatante.</p>
+    <button>Acheter Maintenant</button>
+  </div>
 
+  <!-- Card 2 -->
+  <div class="product-card">
+    <img src="../Images/produits/Tire-Cleaner.avif" alt="Nettoyant Pneus">
+    <h3>Nettoyant Pneus - Armor All</h3>
+    <p>Nettoyant avancé qui redonne à vos pneus leur éclat noir.</p>
+    <button>Acheter Maintenant</button>
+  </div>
 
-    <!-- contact-us  -->
-  <div id="contact" class="contact-section">
-    <div class="container">
-      <div class="title text-center">
-        <h1>Contact Us</h1>
-        <p>Let us know what you need and we will get back to you in no time.</p>
+  <!-- Card 3 -->
+  <div class="product-card">
+    <img src="../Images/produits/Polish&Wax.webp" alt="Polish et Cire">
+    <h3>Polish & Cire - Turtle Wax</h3>
+    <p>Une solution combinée pour polir et cirer, afin de garder la peinture de votre voiture éclatante.</p>
+    <button>Acheter Maintenant</button>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="product-card">
+    <img src="../Images/produits/Engine-cleaner.jpg" alt="Nettoyant Moteur">
+    <h3>Nettoyant Moteur - Gunk</h3>
+    <p>Dégraissez et nettoyez efficacement le moteur de votre voiture avec cette solution puissante.</p>
+    <button>Acheter Maintenant</button>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="product-card">
+    <img src="../Images/produits/scratch-Remover.jpg" alt="Dissolvant Rayures">
+    <h3>Dissolvant Rayures - 3M</h3>
+    <p>Effacez les légères rayures sur la peinture de votre voiture avec ce dissolvant de qualité professionnelle.</p>
+    <button>Acheter Maintenant</button>
+  </div>
+
+  <!-- Card 6 -->
+  <div class="product-card">
+    <img src="../Images/produits/interior-cleaner.webp" alt="Nettoyant Intérieur">
+    <h3>Nettoyant Intérieur - Chemical Guys</h3>
+    <p>Nettoyant tout-en-un pour l'intérieur de votre voiture, y compris les sièges, le tableau de bord, et plus encore.</p>
+    <button>Acheter Maintenant</button>
+  </div>
+
+  <!-- Card 7 -->
+  <div class="product-card">
+    <img src="../Images/produits/Brake-Fluid.jpg" alt="Liquide de Frein">
+    <h3>Liquide de Frein - Bosch</h3>
+    <p>Liquide de frein haute performance, adapté à toutes les voitures modernes.</p>
+    <button>Acheter Maintenant</button>
+  </div>
+
+  <!-- Card 8 -->
+  <div class="product-card">
+    <img src="../Images/produits/winshield-cleaner.png" alt="Nettoyant Pare-Brise">
+    <h3>Nettoyant Pare-Brise - Rain-X</h3>
+    <p>Obtenez un pare-brise propre et sans traces avec ce nettoyant puissant.</p>
+    <button>Acheter Maintenant</button>
+  </div>
+</div>
+<!-- contact-us -->
+<div id="contact" class="contact-section">
+  <div class="container">
+    <div class="title text-center">
+      <h1>Contactez-Nous</h1>
+      <p>Faites-nous savoir ce dont vous avez besoin et nous vous répondrons rapidement.</p>
+    </div>
+    <div class="form">
+      <div class="form-group">
+        <label for="firstname">Prénom</label>
+        <input type="text" name="firstname" id="firstname" placeholder="Foulen">
       </div>
-      <div class="form">
-        <div class="form-group">
-          <label for="firstname">First name</label>
-          <input type="text" name="firstname" id="firstname" placeholder="John">
-        </div>
-        <div class="form-group">
-          <label for="lastname">Last name</label>
-          <input type="text" name="lastname" id="lastname" placeholder="Doe">
-        </div>
-        <div class="form-group full-width">
-          <label for="email">Email Address</label>
-          <input type="email" name="email" id="email" placeholder="john.doe@example.com">
-        </div>
-        <div class="form-group full-width">
-          <label for="subject">Subject</label>
-          <input type="text" name="subject" id="subject" placeholder="Subject Name">
-        </div>
-        <div class="form-group full-width">
-          <label for="message">Message</label>
-          <textarea name="message" id="message" placeholder="Your message..." rows="5"></textarea>
-        </div>
-        <div class="submit">
-          <button id="sendButton">Send Message</button>
-          <div id="loading" class="loading"></div>
-        </div>
+      <div class="form-group">
+        <label for="lastname">Nom de famille</label>
+        <input type="text" name="lastname" id="lastname" placeholder="BenFoulen">
+      </div>
+      <div class="form-group full-width">
+        <label for="email">Adresse Email</label>
+        <input type="email" name="email" id="email" placeholder="foulen@example.com">
+      </div>
+      <div class="form-group full-width">
+        <label for="subject">Sujet</label>
+        <input type="text" name="subject" id="subject" placeholder="Nom du sujet">
+      </div>
+      <div class="form-group full-width">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" placeholder="Votre message..." rows="5"></textarea>
+      </div>
+      <div class="submit">
+        <button id="sendButton">Envoyer le Message</button>
+        <div id="loading" class="loading"></div>
       </div>
     </div>
   </div>
+</div>
+ <!-- Footer -->
+ <footer>
+  <div class="footer-container">
+      <div class="footer-links">
+          <h3>Liens Rapides</h3>
+          <ul>
+              <li><a href="../HTML/index.html">Accueil</a></li>
+              <li><a href="../HTML/Products.html">Produits</a></li>
+              <li><a href="../HTML/Services.html">Services</a></li>
+              <li><a href="../HTML/Blogs.html">Blogs</a></li>
+              <li><a href="#contact">Contact</a></li>
+          </ul>
+      </div>
+      <div class="footer-contact">
+          <h3>Nous Contacter</h3>
+          <p>Email: <a href="mailto:contact@washandgo.com">foulen@gmail.com</a></p>
+          <p>Téléphone: +1 234 567 890</p>
+          <p>Adresse: 123 Wash & Go Rue, Sousse,Tunisie</p>
+      </div>
+      <div class="footer-social">
+          <h3>Suivez-Nous</h3>
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+      </div>
+  </div>
+  <p>&copy; 2024 Réalisé par AmenAllah et Firas.</p>
+</footer>
 </body>
 </html>
