@@ -13,7 +13,20 @@ main {
     justify-content: center; /* Centre horizontalement */
     padding: 20px;
 }
+/* currency style */
+.currency-converter {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
 
+.currency-converter select {
+    padding: 5px 10px;
+    font-size: 1rem;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -26,6 +39,7 @@ main {
     display: flex;
     flex-direction: column; /* Aligne les éléments de la carte en colonne */
     justify-content: space-between; /* Espace entre le contenu et le bouton */
+    align-items: center;
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 8px;

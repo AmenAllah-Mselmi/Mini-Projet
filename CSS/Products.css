@@ -8,6 +8,21 @@ header {
     align-items: center;
     margin-top: 80px;
 }
+/* currency style */
+.currency-converter {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+
+.currency-converter select {
+    padding: 5px 10px;
+    font-size: 1rem;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 /* product style */
 .title {
     text-align: center;
