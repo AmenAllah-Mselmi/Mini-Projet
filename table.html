@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produit de Lavage</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/Products.css">
+    <link rel="shortcut icon" href="../Images/icones/projectIcone.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Styles CSS pour le footer */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <input type="checkbox" id="nav-check">
+        <label for="nav-check" id="nav-checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label id="nav-logo">
+            <img src="../Images/acceuil.png" alt="Erreur">
+        </label>
+        <ul id="nav-links">
+            <li><a id="nav-home" href="./index.html">Home</a></li>
+            <li><a id="nav-products" href="./Products.html">Products</a></li> 
+            <li><a id="nav-services" href="./Services.html">Services</a></li>
+            <li><a id="nav-blogs" href="./Blogs.html">Blogs</a></li> 
+            <li><a id="nav-contact" href="#contact">Contact</a></li>   
+            <li><a id="nav-table" href="./table.html">Table</a></li>
+            <li>
+                <a id="nav-logout" href="#" onclick="login()">
+                    <i class="fas fa-sign-in-alt" id="loginIcon"></i> Log
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div style="margin-top:100px"></div>
+
+    <div id="userList">
+        <h3>Utilisateurs enregistrés :</h3>
+        <ul id="userListItems"></ul>
+    </div>
+    <div style="margin-bottom:500px"></div>
+    <div id="contact" class="contact-section">
+        <div class="container">
+          <div class="title text-center">
+            <h1>Contactez-Nous</h1>
+            <p>Faites-nous savoir ce dont vous avez besoin et nous vous répondrons rapidement.</p>
+          </div>
+          <div class="form">
+            <div class="form-group">
+              <label for="firstname">Prénom</label>
+              <input type="text" name="firstname" id="firstname" placeholder="Foulen">
+            </div>
+            <div class="form-group">
+              <label for="lastname">Nom de famille</label>
+              <input type="text" name="lastname" id="lastname" placeholder="BenFoulen">
+            </div>
+            <div class="form-group full-width">
+              <label for="email">Adresse Email</label>
+              <input type="email" name="email" id="email" placeholder="foulen@example.com">
+            </div>
+            <div class="form-group full-width">
+              <label for="subject">Sujet</label>
+              <input type="text" name="subject" id="subject" placeholder="Nom du sujet">
+            </div>
+            <div class="form-group full-width">
+              <label for="message">Message</label>
+              <textarea name="message" id="message" placeholder="Votre message..." rows="5"></textarea>
+            </div>
+            <div class="submit">
+              <button id="sendButton">Envoyer le Message</button>
+              <div id="loading" class="loading"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <h3>Liens Rapides</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="./HTML/Products.html">Produits</a></li>
+                    <li><a href="./HTML/Services.html">Services</a></li>
+                    <li><a href="./HTML/Blogs.html">Blogs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Nous Contacter</h3>
+                <p>Email: <a href="mailto:contact@washandgo.com">foulen@gmail.com</a></p>
+                <p>Téléphone: +1 234 567 890</p>
+                <p>Adresse: 123 Wash & Go Rue, Sousse,Tunisie</p>
+            </div>
+            <div class="footer-social">
+                <h3>Suivez-Nous</h3>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <p>&copy; 2024 Réalisé par AmenAllah et Firas.</p>
+    </footer>
+    <script src="app.js"></script>
+    <script>
+        function login() {
+            window.location.href = "./signIn.html"; 
+        }
+    </script>
+</body>
+</html>

@@ -25,7 +25,13 @@
             <li><a id="nav-services" href="./Products.html">products</a></li>
             <li><a id="nav-services" href="./Services.html">Services</a></li>
             <li><a id="nav-feedback" href="./Blogs.html">Blogs</a></li>
-            <li><a id="nav-contact" href="#contact">Contact</a></li>   
+            <li><a id="nav-contact" href="#contact">Contact</a></li>  
+            <li><a id="nav-table" href="./table.html">Table</a></li>
+            <li>
+                <a id="nav-logout" href="#" onclick="login()">
+                    <i class="fas fa-sign-in-alt" id="loginIcon"></i> Log
+                </a>
+            </li>
         </ul>
     </nav>
     <!-- titre -->
@@ -158,5 +164,10 @@
         <p>&copy; 2024 Réalisé par AmenAllah et Firas.</p>
     </footer>
     <script src="./JS/Services.js"></script>
+    <script>
+        function login() {
+            window.location.href = "./signIn.html"; 
+        }
+    </script>
 </body>
 </html>
