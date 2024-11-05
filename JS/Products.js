@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "EUR": 0.30  //  EUR
     };
 
-    // Fonction pour convertir et afficher les prix
     function convertPrices() {
         const selectedCurrency = currencySelect.value;
         const rate = exchangeRates[selectedCurrency];
@@ -20,9 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Écouteur d'événement pour changement de devise
+    
     currencySelect.addEventListener("change", convertPrices);
 
-    // Initialisation : Affichage des prix en devise par défaut
+    
     convertPrices();
 });
