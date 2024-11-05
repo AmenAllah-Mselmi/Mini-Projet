@@ -1,0 +1,44 @@
+/* Styles de base pour le tableau */
+#userTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#userTable thead {
+    background-color: #4CAF50;
+    color: #ffffff;
+}
+
+#userTable th,
+#userTable td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+}
+
+/* Alternance des couleurs pour les lignes */
+#userTable tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+#userTable tbody tr:hover {
+    background-color: #e0f7e9;
+}
+
+/* Style des cellules d'en-tête */
+#userTable th {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Style des cellules */
+#userTable td {
+    color: #333;
+}

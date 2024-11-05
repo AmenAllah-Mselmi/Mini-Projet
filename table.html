@@ -6,6 +6,7 @@
     <title>Produit de Lavage</title>
     <link rel="stylesheet" href="../CSS/index.css">
     <link rel="stylesheet" href="../CSS/Products.css">
+    <link rel="stylesheet" href="./CSS/users.css">
     <link rel="shortcut icon" href="../Images/icones/projectIcone.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
@@ -56,8 +57,19 @@
 
     <div id="userList">
         <h3>Utilisateurs enregistrés :</h3>
-        <ul id="userListItems"></ul>
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="userListItems">
+                <!-- Les utilisateurs seront ajoutés ici dynamiquement -->
+            </tbody>
+        </table>
     </div>
+    
     <div style="margin-bottom:500px"></div>
     <div id="contact" class="contact-section">
         <div class="container">

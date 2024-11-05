@@ -21,12 +21,21 @@ function updateUserList() {
     if (userListItems) {
         userListItems.innerHTML = "";
         users.forEach((user) => {
-            const li = document.createElement("li");
-            li.textContent = `Nom: ${user.name}, Email: ${user.email}`;
-            userListItems.appendChild(li);
+            const row = document.createElement("tr");
+
+            const nameCell = document.createElement("td");
+            nameCell.textContent = user.name;
+            row.appendChild(nameCell);
+
+            const emailCell = document.createElement("td");
+            emailCell.textContent = user.email;
+            row.appendChild(emailCell);
+
+            userListItems.appendChild(row);
         });
     }
 }
+
 
 // Fonction pour valider l'email
 function validateEmail(email) {
