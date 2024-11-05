@@ -70,3 +70,9 @@ p a {
     color: #007bff;
     text-decoration: none;
 }
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    display: block;
+}
