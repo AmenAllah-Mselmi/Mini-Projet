@@ -86,8 +86,7 @@
         </tbody>
     </table>
     <div style="text-align: center;">
-        <a href="/app/views/items/add.php">Ajouter un Produit</a>
-        <a href="/app/views/items/delete.php">Supprimer un Produit</a>
+        <a href="../../../../Products.php">retourner vers produits</a>
     </div>
 </body>
 </html>

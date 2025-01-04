@@ -7,7 +7,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $quantity = intval($_POST['quantity']);
     $category = htmlspecialchars($_POST['category']);
     
-    
     // (Optionnel) Enregistrement dans une base de données
     try {
         $pdo = new PDO('mysql:host=localhost;dbname=lavage1', 'root', '');
@@ -22,7 +21,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ':category' => $category,
         ]);
 
-        echo "Produit ajouté avec succès !";
+        // Redirection vers index.html
+        header("Location: ../../../../Products.php");
+        exit(); // Assurez-vous d'arrêter l'exécution après la redirection
     } catch (PDOException $e) {
         die("Erreur : " . $e->getMessage());
     }
