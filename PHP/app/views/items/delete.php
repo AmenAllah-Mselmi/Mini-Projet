@@ -55,11 +55,15 @@
 </head>
 <body>
     <h1>Supprimer un Item</h1>
-    <form action="/public/index.php?controller=item&action=delete" method="POST">
+    <form action="../../../public/index.php?controller=item&action=delete" method="POST">
         <label for="item_id">ID de l'Item :</label>
         <input type="number" name="item_id" id="item_id" placeholder="Entrez l'ID de l'item" required>
 
         <button type="submit">Supprimer l'Item</button>
+        <div class="footer">
+        <p>Retour à la <a href="/Products.php">Liste des Produits</a></p>
+        </div>
     </form>
+    
 </body>
 </html>

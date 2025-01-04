@@ -91,10 +91,12 @@
         .footer a:hover {
             text-decoration: underline;
         }
+        .bt{
+            color: red;
+        }
     </style>
 </head>
 <body>
-
     <div class="container">
         <h1>Ajouter un Produit</h1>
         <form action="traiter_ajout_produit.php" method="POST" enctype="multipart/form-data">
@@ -132,8 +134,10 @@
             <button type="submit">Ajouter le Produit</button>
         </form>
         <div class="footer">
-        <p>Retour à la <a href="/public/index.php">Liste des Produits</a></p>
+        <p>Retour à la <a href="/Products.php">Liste des Produits</a></p>
         </div>
+        <p ><a href="delete.php" class="bt">Supprimer Produits</a></p>
+
     </div>
 
     

@@ -110,27 +110,41 @@ $result = $conn->query($sql);
 <body>
      <!-- Navbar -->
      <nav>
-        <input type="checkbox" id="nav-check">
-        <label for="nav-check" id="nav-checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <label id="nav-logo">
-            <img src="./Images/acceuil.png" alt="Erreur">
-        </label>
-        <ul id="nav-links">
-            <li><a id="nav-home" href="./index.html" >Accueil</a></li>
-            <li><a id="nav-products" href="./Products.php">Produits</a></li>
-            <li><a id="nav-services" href="./Services.html">Services</a></li>
-            <li><a id="nav-blogs" href="./Blogs.html">Blogs</a></li>
-            <li><a id="nav-contact" href="#contact">Contact</a></li>
-            <li><a id="nav-table" href="./table.php">Table</a></li>
-            <li>
-                <a id="nav-logout" href="#" onclick="login()">
-                    <i class="fas fa-sign-in-alt" id="loginIcon"></i> Log
-                </a>
-            </li>
-        </ul>
+      <input type="checkbox" id="nav-check" />
+      <label for="nav-check" id="nav-checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label id="nav-logo">
+        <img src="./Images/acceuil.png" alt="Erreur" />
+      </label>
+      <ul id="nav-links">
+        <li><a id="nav-home" href="./index.html">Accueil</a></li>
+        <li><a id="nav-products" href="./Products.php">Produits</a></li>
+        <li>
+          <a id="nav-products" href="./PHP/app/views/items/add.php"
+            >Gestion Produits</a
+          >
+        </li>
+        <li><a id="nav-services" href="./Services.html">Services</a></li>
+        <li><a id="nav-blogs" href="./Blogs.html">Blogs</a></li>
+        <li><a id="nav-contact" href="#contact">Contact</a></li>
+        <li><a id="nav-table" href="./table.php">Table</a></li>
+
+        <li>
+          <a id="nav-logout" href="#" onclick="login()">
+            <i class="fas fa-sign-in-alt" id="loginIcon"></i> Log
+          </a>
+        </li>
+      </ul>
     </nav>
+    <div id="cart-container" class="hidden">
+        <div id="cart-content">
+          <h2>Mon Panier</h2>
+          <ul id="cart-items">
+            <li>Aucun article dans le panier.</li>
+          </ul>
+        </div>
+      </div>
     <header>
         <h1>Gestion des Utilisateurs</h1>
     </header>
@@ -227,16 +241,34 @@ $result = $conn->query($sql);
                 <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
-        <p>&copy; 2024 Réalisé par AmenAllah et Firas.</p>
+        <p>&copy; 2025 Réalisé par AmenAllah et Firas.</p>
     </footer>
-    <footer class="footer">
-        &copy; 2025 Gestion des Utilisateurs. Réalisé par <strong>AmenAllah Mselmi</strong>.
-        
-    </footer>
+    
     <script>
         function login() {
-            window.location.href = "./signIn.php"; 
+        window.location.href = "./signIn.php";
+      }
+      // script.js
+
+      // Gestion du panier
+      let cartVisible = false;
+
+      function toggleCart() {
+        const cartContainer = document.getElementById("cart-container");
+        cartContainer.classList.toggle("hidden");
+      }
+
+
+      // Masquer le panier si on clique à l'extérieur
+      document.addEventListener("click", (e) => {
+        const cartContainer = document.getElementById("cart-container");
+        const cartIcon = document.getElementById("cart-icon");
+
+        if (!cartContainer.contains(e.target) && e.target !== cartIcon) {
+          cartContainer.classList.add("hidden");
+          cartVisible = false;
         }
+      });
     </script>
 </body>
 </html>

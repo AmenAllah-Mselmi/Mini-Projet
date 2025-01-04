@@ -1,197 +1,290 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/index.css">
-    <link rel="shortcut icon" href="./Images/icones/projectIcone.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/index.css" />
+    <link
+      rel="shortcut icon"
+      href="./Images/icones/projectIcone.png"
+      type="image/x-icon"
+    />
     <!-- Include Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <title>Wash & Go</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Navbar -->
     <nav>
-        <input type="checkbox" id="nav-check">
-        <label for="nav-check" id="nav-checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <label id="nav-logo">
-            <img src="./Images/acceuil.png" alt="Erreur">
-        </label>
-        <ul id="nav-links">
-            <li><a id="nav-home" href="./index.html" >Accueil</a></li>
-            <li><a id="nav-products" href="./Products.php">Produits</a></li>
-            <li><a id="nav-services" href="./Services.html">Services</a></li>
-            <li><a id="nav-blogs" href="./Blogs.html">Blogs</a></li>
-            <li><a id="nav-contact" href="#contact">Contact</a></li>
-            <li><a id="nav-table" href="./table.php">Table</a></li>
-            <li>
-                <a id="nav-logout" href="#" onclick="login()">
-                    <i class="fas fa-sign-in-alt" id="loginIcon"></i> Log
-                </a>
-            </li>
-        </ul>
+      <input type="checkbox" id="nav-check" />
+      <label for="nav-check" id="nav-checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label id="nav-logo">
+        <img src="./Images/acceuil.png" alt="Erreur" />
+      </label>
+      <ul id="nav-links">
+        <li><a id="nav-home" href="./index.html">Accueil</a></li>
+        <li><a id="nav-products" href="./Products.php">Produits</a></li>
+        <li>
+          <a id="nav-products" href="./PHP/app/views/items/add.php"
+            >Gestion Produits</a
+          >
+        </li>
+        <li><a id="nav-services" href="./Services.html">Services</a></li>
+        <li><a id="nav-blogs" href="./Blogs.html">Blogs</a></li>
+        <li><a id="nav-contact" href="#contact">Contact</a></li>
+        <li><a id="nav-table" href="./table.php">Table</a></li>
+
+        <li>
+          <a id="nav-logout" href="#" onclick="login()">
+            <i class="fas fa-sign-in-alt" id="loginIcon"></i> Log
+          </a>
+        </li>
+      </ul>
     </nav>
+
+    <div id="cart-container" class="hidden">
+        <div id="cart-content">
+          <h2>Mon Panier</h2>
+          <ul id="cart-items">
+            <li>Aucun article dans le panier.</li>
+          </ul>
+        </div>
+      </div>
+      
+
     <!-- Acceuil -->
     <div id="acceuil" class="background">
-        <div id="header">
-            <img src="./Images/acceuil.png" alt="Wash & Go" id="logo" />
+      <div id="header">
+        <img src="./Images/acceuil.png" alt="Wash & Go" id="logo" />
+      </div>
+      <div id="content">
+        <div id="text-container">
+          <div>
+            <span>Bienvenue chez </span>
+            <span id="highlight">Wash and Go</span>
+          </div>
+          <div>
+            <span id="quality"
+              >Take care of your car, and it will take care of you</span
+            >
+          </div>
         </div>
-        <div id="content">
-            <div id="text-container">
-                <div>
-                    <span>Bienvenue chez </span>
-                    <span id="highlight">Wash and Go</span>
-                </div>
-                <div>
-                    <span id="quality">Take care of your car, and it will take care of you</span>
-                </div>
-            </div>
-            <a href="#overview" id="about-link">À propos de nous</a>
-        </div>
+        <a href="#overview" id="about-link">À propos de nous</a>
+      </div>
     </div>
-    
+
     <!-- Aperçu de notre entreprise -->
     <div id="overview">
-        <h1>QUI SOMMES-NOUS ?</h1>
-        <div class="content">
-            <div class="text">
-                <p>
-                    Bienvenue chez Wash & Go, votre spécialiste en lavage auto et entretien de véhicules. Nous offrons des services de lavage de haute qualité, allant du nettoyage en profondeur avec nos machines JetWash à l'entretien régulier de votre véhicule. Notre engagement envers l'écologie se reflète dans l'utilisation d'énergie solaire, de produits biodégradables et d'un système de recyclage de l'eau. Chez Wash & Go, la satisfaction de nos clients est au cœur de notre mission, avec des services rapides, fiables et respectueux de l’environnement. Faites-nous confiance pour maintenir votre voiture propre et performante, tout en préservant la planète.
-                </p>
-            </div>
-            <div class="video">
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/PDS3LWUiR_Q" title="BRANDNEW WashTec SmartCare" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
+      <h1>QUI SOMMES-NOUS ?</h1>
+      <div class="content">
+        <div class="text">
+          <p>
+            Bienvenue chez Wash & Go, votre spécialiste en lavage auto et
+            entretien de véhicules. Nous offrons des services de lavage de haute
+            qualité, allant du nettoyage en profondeur avec nos machines JetWash
+            à l'entretien régulier de votre véhicule. Notre engagement envers
+            l'écologie se reflète dans l'utilisation d'énergie solaire, de
+            produits biodégradables et d'un système de recyclage de l'eau. Chez
+            Wash & Go, la satisfaction de nos clients est au cœur de notre
+            mission, avec des services rapides, fiables et respectueux de
+            l’environnement. Faites-nous confiance pour maintenir votre voiture
+            propre et performante, tout en préservant la planète.
+          </p>
         </div>
+        <div class="video">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/PDS3LWUiR_Q"
+              title="BRANDNEW WashTec SmartCare"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Section des services -->
     <div id="services">
-        <div class="part" id="part1">
-            <h1>Lavage Auto en Libre-Service</h1>
-            <p>2 MACHINES DE LAVAGE AUTOMATIQUE JETWASH:</p>
-            <p>JetWash : Notre technologie de lavage HP WASH & GO comble les attentes des clients les plus exigeants en matière de qualité, de conception et de confort d’utilisation.</p>
-        </div>
-        <div class="part" id="part2">
-            <h1>Produits de Qualité</h1>
-            <ul>
-                <li>TECHNOLOGIES DISPONIBLES:</li>
-                <li>-Brosses Softecs</li>
-                <li>-MultiFlex WheelJet</li>
-                <li>-InsecTecs</li>
-                <li>-ShineTecs</li>
-                <li>-RainTecs</li>
-            </ul>
-        </div>
-        <div class="part" id="part3">
-            <h1>Respect de l'Environnement</h1>
-            <p>NOTRE MISSION ÉCOLOGIQUE:</p>
-            <ul>
-                <li>-Centre de lavage alimenté par énergie solaire.</li>
-                <li>-Équipements économes en eau et électricité.</li>
-                <li>-90% des produits de lavage sont biodégradables.</li>
-                <li>-Système de recyclage d’eau (90% d’eau récupérée).</li>
-                <li>-Système de traitement des eaux usées.</li>
-            </ul>
-        </div>
+      <div class="part" id="part1">
+        <h1>Lavage Auto en Libre-Service</h1>
+        <p>2 MACHINES DE LAVAGE AUTOMATIQUE JETWASH:</p>
+        <p>
+          JetWash : Notre technologie de lavage HP WASH & GO comble les attentes
+          des clients les plus exigeants en matière de qualité, de conception et
+          de confort d’utilisation.
+        </p>
+      </div>
+      <div class="part" id="part2">
+        <h1>Produits de Qualité</h1>
+        <ul>
+          <li>TECHNOLOGIES DISPONIBLES:</li>
+          <li>-Brosses Softecs</li>
+          <li>-MultiFlex WheelJet</li>
+          <li>-InsecTecs</li>
+          <li>-ShineTecs</li>
+          <li>-RainTecs</li>
+        </ul>
+      </div>
+      <div class="part" id="part3">
+        <h1>Respect de l'Environnement</h1>
+        <p>NOTRE MISSION ÉCOLOGIQUE:</p>
+        <ul>
+          <li>-Centre de lavage alimenté par énergie solaire.</li>
+          <li>-Équipements économes en eau et électricité.</li>
+          <li>-90% des produits de lavage sont biodégradables.</li>
+          <li>-Système de recyclage d’eau (90% d’eau récupérée).</li>
+          <li>-Système de traitement des eaux usées.</li>
+        </ul>
+      </div>
     </div>
 
     <!-- Section des produits -->
     <div id="sponsors-title">
-        <h1>Quelques Produits</h1>
+      <h1>Quelques Produits</h1>
     </div>
     <div class="sponsors">
-        <div class="sponsor">
-            <img src="./Images/produits/scratch-Remover.jpg" alt="Produit 1">
-            <p>Dissolvant Rayures - 3M</p>
-        </div>
-        <div class="sponsor">
-            <img src="./Images/produits/Engine-cleaner.jpg" alt="Engine-cleaner">
-            <p>Nettoyant Moteur - Gunk</p>
-        </div>
-        <div class="sponsor">
-            <img src="./Images/produits/Polish&Wax.webp" alt="Polish&Wax">
-            <p>Polish & Cire - Turtle Wax</p>
-        </div>
-        <div class="sponsor">
-            <img src="./Images/produits/car-shampoo.webp" alt="Produit 3">
-            <p>Shampoing Voiture - Meguiar's</p>
-        </div>
+      <div class="sponsor">
+        <img src="./Images/produits/scratch-Remover.jpg" alt="Produit 1" />
+        <p>Dissolvant Rayures - 3M</p>
+      </div>
+      <div class="sponsor">
+        <img src="./Images/produits/Engine-cleaner.jpg" alt="Engine-cleaner" />
+        <p>Nettoyant Moteur - Gunk</p>
+      </div>
+      <div class="sponsor">
+        <img src="./Images/produits/Polish&Wax.webp" alt="Polish&Wax" />
+        <p>Polish & Cire - Turtle Wax</p>
+      </div>
+      <div class="sponsor">
+        <img src="./Images/produits/car-shampoo.webp" alt="Produit 3" />
+        <p>Shampoing Voiture - Meguiar's</p>
+      </div>
     </div>
 
     <!-- Section Contact -->
     <div id="contact" class="contact-section">
-        <div class="container">
-            <div class="title text-center">
-                <h1>Contactez-Nous</h1>
-                <p>Laissez-nous un message, et nous vous répondrons rapidement.</p>
-            </div>
-            <div class="form">
-                <div class="form-group">
-                    <label for="firstname">Prénom</label>
-                    <input type="text" name="firstname" id="firstname" placeholder="Foulen">
-                </div>
-                <div class="form-group">
-                    <label for="lastname">Nom de famille</label>
-                    <input type="text" name="lastname" id="lastname" placeholder="BenFoulen">
-                </div>
-                <div class="form-group full-width">
-                    <label for="email">Adresse e-mail</label>
-                    <input type="email" name="email" id="email" placeholder="foulen@example.com">
-                </div>
-                <div class="form-group full-width">
-                    <label for="subject">Sujet</label>
-                    <input type="text" name="subject" id="subject" placeholder="Nom du sujet">
-                </div>
-                <div class="form-group full-width">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" placeholder="Votre message..." rows="5"></textarea>
-                </div>
-                <div class="submit">
-                    <button id="sendButton">Envoyer le message</button>
-                    <div id="loading" class="loading"></div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="title text-center">
+          <h1>Contactez-Nous</h1>
+          <p>Laissez-nous un message, et nous vous répondrons rapidement.</p>
         </div>
+        <div class="form">
+          <div class="form-group">
+            <label for="firstname">Prénom</label>
+            <input
+              type="text"
+              name="firstname"
+              id="firstname"
+              placeholder="Foulen"
+            />
+          </div>
+          <div class="form-group">
+            <label for="lastname">Nom de famille</label>
+            <input
+              type="text"
+              name="lastname"
+              id="lastname"
+              placeholder="BenFoulen"
+            />
+          </div>
+          <div class="form-group full-width">
+            <label for="email">Adresse e-mail</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="foulen@example.com"
+            />
+          </div>
+          <div class="form-group full-width">
+            <label for="subject">Sujet</label>
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="Nom du sujet"
+            />
+          </div>
+          <div class="form-group full-width">
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Votre message..."
+              rows="5"
+            ></textarea>
+          </div>
+          <div class="submit">
+            <button id="sendButton">Envoyer le message</button>
+            <div id="loading" class="loading"></div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-container">
-            <div class="footer-links">
-                <h3>Liens Rapides</h3>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="./HTML/Products.php">Produits</a></li>
-                    <li><a href="./HTML/Services.html">Services</a></li>
-                    <li><a href="./HTML/Blogs.html">Blogs</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h3>Nous Contacter</h3>
-                <p>Email: <a href="mailto:contact@washandgo.com">foulen@gmail.com</a></p>
-                <p>Téléphone: +1 234 567 890</p>
-                <p>Adresse: 123 Wash & Go Rue, Sousse,Tunisie</p>
-            </div>
-            <div class="footer-social">
-                <h3>Suivez-Nous</h3>
-                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-            </div>
+      <div class="footer-container">
+        <div class="footer-links">
+          <h3>Liens Rapides</h3>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="./HTML/Products.php">Produits</a></li>
+            <li><a href="./HTML/Services.html">Services</a></li>
+            <li><a href="./HTML/Blogs.html">Blogs</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
-        <p>&copy; 2024 Réalisé par AmenAllah et Firas.</p>
+        <div class="footer-contact">
+          <h3>Nous Contacter</h3>
+          <p>
+            Email: <a href="mailto:contact@washandgo.com">foulen@gmail.com</a>
+          </p>
+          <p>Téléphone: +1 234 567 890</p>
+          <p>Adresse: 123 Wash & Go Rue, Sousse,Tunisie</p>
+        </div>
+        <div class="footer-social">
+          <h3>Suivez-Nous</h3>
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <p>&copy; 2025 Réalisé par AmenAllah et Firas.</p>
     </footer>
     <script>
-        function login() {
-            window.location.href = "./signIn.php"; 
+      function login() {
+        window.location.href = "./signIn.php";
+      }
+      // script.js
+
+      // Gestion du panier
+      let cartVisible = false;
+
+      function toggleCart() {
+        const cartContainer = document.getElementById("cart-container");
+        cartContainer.classList.toggle("hidden");
+      }
+
+
+      // Masquer le panier si on clique à l'extérieur
+      document.addEventListener("click", (e) => {
+        const cartContainer = document.getElementById("cart-container");
+        const cartIcon = document.getElementById("cart-icon");
+
+        if (!cartContainer.contains(e.target) && e.target !== cartIcon) {
+          cartContainer.classList.add("hidden");
+          cartVisible = false;
         }
+      });
     </script>
-</body>
+  </body>
 </html>
