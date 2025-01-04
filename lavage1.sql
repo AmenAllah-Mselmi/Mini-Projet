@@ -43,8 +43,8 @@ CREATE TABLE `produits` (
 --
 
 INSERT INTO `produits` (`id`, `name`, `description`, `price`, `quantity`, `category`) VALUES
-(3, 'pc3', 'test', '10.04', 56, 'Polish et Cire'),
-(4, 'pc4', 'gvhj,', '20.06', 56, 'Dissolvant Rayures');
+(3, 'produit1', 'test', '10.04', 56, 'Polish et Cire'),
+(4, 'produit2', 'gvhj,', '20.06', 56, 'Dissolvant Rayures');
 
 -- --------------------------------------------------------
 
